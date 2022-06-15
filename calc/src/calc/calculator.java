@@ -20,7 +20,7 @@ class calculator extends JFrame implements ActionListener {
     }
 
     // main function
-    .public static void main(String args[])
+    public static void main(String args[])
     {
         // create a frame
         f = new JFrame("calculator");
