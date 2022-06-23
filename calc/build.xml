@@ -88,7 +88,7 @@
             <classpath refid="run.calculatorTest.classpath"/>
         </junit>
     </target>
-    <target name="junitreport">
+    <target name="junitresult">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
                 <include name="TEST-*.xml"/>
