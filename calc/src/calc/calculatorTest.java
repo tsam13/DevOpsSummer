@@ -1,5 +1,5 @@
 package calc;
-// Update 2.3
+// Update 2.4
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
