@@ -1,5 +1,5 @@
 package calc;
-// Update 2.2
+// Update 2.3
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,7 @@ class calculatorTest {
 	
 
 	@Test
-	public void testAdd() {
+	void testAdd() {
 		var calc = new calculator();
 		assertEquals(15, calc.add(7,8));
 		}
