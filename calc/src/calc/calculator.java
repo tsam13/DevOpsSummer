@@ -1,5 +1,5 @@
 package calc;
-//Update 20.
+//Update 2.2.
 import java.awt.event.*;
         import javax.swing.*;
         import java.awt.*;
