@@ -1,11 +1,9 @@
-package calc;
-// Update 2.4
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+
 class calculatorTest {
-	
 
 	@Test
 	void testAdd() {
