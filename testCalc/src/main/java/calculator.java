@@ -2,7 +2,7 @@ import java.awt.event.*;
         import javax.swing.*;
         import java.awt.*;
 class calculator extends JFrame implements ActionListener {
-    // create a frame12
+    // create a frame123
     static JFrame f;
 
     // create a textfield
