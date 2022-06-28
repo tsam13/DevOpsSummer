@@ -8,4 +8,13 @@
      <maven.compiler.source>17</maven.compiler.source>
      <maven.compiler.target>17</maven.compiler.target>
 </properties>
+<dependencies>
+
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.0.0-M5</version>
+    <scope>testCalc</scope>
+</dependency>
+</dependencies> 
 </project>
