@@ -9,13 +9,13 @@ class calculatorTest {
 	@Test
 	void testAdd() {
 		var calc = new calculator();
-		assertEquals(15, calc.add(7,8));
+		assertEquals(15, calc.add(8,8));
 		}
 
 	@Test
 	void testSubtract() {
 		var calc = new calculator();
-		assertEquals(8, calc.subtract(15,7));
+		assertEquals(8, calc.subtract(16,7));
 	}
 
 	@Test
