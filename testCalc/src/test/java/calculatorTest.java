@@ -9,7 +9,7 @@ class calculatorTest {
 	@Test
 	void testAdd() {
 		var calc = new calculator();
-		assertEquals(15, calc.add(8,8));
+		assertEquals(15, calc.add(7,8));
 		}
 
 	@Test
