@@ -38,8 +38,7 @@ class calculatorTest {
 		driver = new ChromeDriver(options);
 		driver.get("https://www.usf.edu/");
 		System.out.println(driver.getTitle());
-		//assertTrue("Page title is not correct",driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee,\r\n"
-	//			+ "      FL"));
+		assertTrue(driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee, FL"));
 		
 	}
 	
