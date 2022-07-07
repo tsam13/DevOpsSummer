@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.Assert;
@@ -38,7 +39,7 @@ class calculatorTest {
 		driver = new ChromeDriver(options);
 		driver.get("https://www.usf.edu/");
 		System.out.println(driver.getTitle());
-		Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee,\r\n"
+		assertTrue("Page title is not correct",driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee,\r\n"
 				+ "      FL"));
 		
 	}
