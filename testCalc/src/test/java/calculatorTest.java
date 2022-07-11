@@ -1,8 +1,9 @@
 
 import static org.junit.jupiter.api.Assertions.*;
-//import org.junit.Assert;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -39,6 +40,10 @@ class calculatorTest {
 		driver.get("https://www.usf.edu/");
 		System.out.println(driver.getTitle());
 		assertTrue(driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee, FL"));
+		 WebElement p=driver.findElement(By.linkText("Work at USF"));
+	      p.click();
+	      System.out.println("Page title after link click : " + driver.getTitle());
+	      driver.close();
 		
 	}
 	
