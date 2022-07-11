@@ -40,7 +40,9 @@ class calculatorTest {
 		driver.get("https://www.usf.edu/");
 		System.out.println(driver.getTitle());
 		assertTrue(driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee, FL"));
-		 WebElement p=driver.findElement(By.linkText("Work at USF"));
+		WebElement d=driver.findElement(By.name("About USF")); 
+		  d.click();
+		WebElement p=driver.findElement(By.linkText("Work at USF"));
 	      p.click();
 	      System.out.println("Page title after link click : " + driver.getTitle());
 	      driver.close();
