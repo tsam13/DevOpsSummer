@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 //1
@@ -44,6 +46,8 @@ class calculatorTest {
 		WebElement d=driver.findElement(By.className("collapsible-heading-toggle")); 
 		  d.click();
 		System.out.println("flag 2");
+		WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
+		webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Overview")));
 		WebElement p=driver.findElement(By.linkText("Overview"));
 	      p.click();
 	    System.out.println("flag 3");
