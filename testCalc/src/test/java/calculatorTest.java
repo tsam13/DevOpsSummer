@@ -42,7 +42,7 @@ class calculatorTest {
 		assertTrue(driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee, FL"));
 		WebElement d=driver.findElement(By.className("collapsible-heading-toggle")); 
 		  d.click();
-		WebElement p=driver.findElement(By.linkText("Work at USF"));
+		WebElement p=driver.findElement(By.linkText("Overview"));
 	      p.click();
 	      System.out.println("Page title after link click : " + driver.getTitle());
 	      driver.close();
