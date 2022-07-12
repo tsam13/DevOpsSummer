@@ -48,7 +48,7 @@ class calculatorTest {
 		System.out.println("flag 2");
 		WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
 		webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Work at USF")));
-		WebElement p=driver.findElement(By.linkText("Overview"));
+		WebElement p=driver.findElement(By.linkText("Work at USF"));
 	      p.click();
 	    System.out.println("flag 3");
 	      System.out.println("Page title after link click : " + driver.getTitle());
