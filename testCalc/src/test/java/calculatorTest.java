@@ -43,7 +43,7 @@ class calculatorTest {
 		System.out.println(driver.getTitle());
 		//assertTrue(driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee, FL"));
 		System.out.println("flag 1");
-		WebElement d=driver.findElement(By.name("About USF")); 
+		WebElement d=driver.findElement(By.className("subNav_heading")); 
 		  d.click();
 		System.out.println("flag 2");
 		WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
