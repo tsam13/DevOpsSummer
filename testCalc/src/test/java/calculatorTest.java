@@ -44,7 +44,7 @@ class calculatorTest {
 		WebElement d=driver.findElement(By.className("collapsible-heading-toggle")); 
 		  d.click();
 		System.out.println("flag 2");
-		WebElement p=driver.findElement(By.linkText("Work at USF"));
+		WebElement p=driver.findElement(By.linkText("Overview"));
 	      p.click();
 	    System.out.println("flag 3");
 	      System.out.println("Page title after link click : " + driver.getTitle());
