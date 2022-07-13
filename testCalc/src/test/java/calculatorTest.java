@@ -57,8 +57,8 @@ class calculatorTest {
 		//  System.out.println(items);
 		System.out.println("flag 2");
 		WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
-		webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Work at USF")));
-		WebElement p=driver.findElement(By.linkText("Work at USF"));
+		webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/work-at-usf/']")));
+		WebElement p=driver.findElement(By.xpath("//a[@href='/work-at-usf/']"));
 	      p.click();
 	    System.out.println("flag 3");
 	    String title = driver.getTitle();
