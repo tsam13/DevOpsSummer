@@ -48,7 +48,7 @@ class calculatorTest {
 		Actions action = new Actions(driver);
 		WebElement d=driver.findElement(By.className("subNav_heading"));
 		  System.out.println(d);
-		  action.moveToElement(d).moveToElement(driver.findElement(By.linkText("Work at USF"))).click();
+		  //action.moveToElement(d).moveToElement(driver.findElement(By.linkText("Work at USF"))).click();
 		  //action.moveToElement(button).moveToElement(webdriver.findElement(By.linkText("Registry Settings")).click().build().perform();
 		  WebElement x = driver.findElement(By.xpath("//a[@href='/work-at-usf/']"));
 		  x.click();
