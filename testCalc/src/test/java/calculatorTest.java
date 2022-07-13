@@ -51,9 +51,7 @@ class calculatorTest {
 		String originalWindow = driver.getWindowHandle();
 		System.out.println(driver.getTitle());
 		assertTrue(driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee, FL"));
-		
-		System.out.println("flag 1");
-		
+			System.out.println("flag 1");
 		Actions action = new Actions(driver);
 		WebElement d=driver.findElement(By.xpath("/html/body/header/div[3]/div/nav/ul/li[1]/div[1]/a"));  
 		System.out.println(d);
@@ -61,21 +59,17 @@ class calculatorTest {
 		System.out.println(t);
 		d.click();
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-		
-		System.out.println("flag 2");
-		
+			System.out.println("flag 2");
 		WebElement x = driver.findElement(By.xpath("/html/body/header/div[3]/div/nav/ul/li[1]/div[2]/div/div[3]/ul/li[4]/a"));
 		x.click();
-	    System.out.println("flag 3");
+	    	System.out.println("flag 3");
 	    String title = driver.getTitle();
 	      System.out.println("Page title after link click : " + title);
 	      driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-	     
 	    WebElement y = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/a[2]"));
 	    y.click();
 	    driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-	    System.out.println("flag 4");
-	  
+	    	System.out.println("flag 4");
 	    //Loop through until we find a new window handle
 	    for (String windowHandle : driver.getWindowHandles()) {
 	        if(!originalWindow.contentEquals(windowHandle)) {
@@ -83,18 +77,13 @@ class calculatorTest {
 	            break;
 	        }
 	    }
-	    
-	 
 	    title = driver.getTitle();
 	    System.out.println("Page title after link click : " + title);
-	    
-	    
 	    driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);  
 	    WebElement z = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/p[5]/a"));
 	    z.click();
 	    driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 	    System.out.println("flag 5");
-	    
 	    title = driver.getTitle();
 	    System.out.println("Page title after link click : " + title);
 	    driver.close();
