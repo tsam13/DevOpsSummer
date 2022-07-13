@@ -41,7 +41,7 @@ class calculatorTest {
 		options.addArguments("headless");
 		driver = new ChromeDriver(options);
 		driver.get("https://www.usf.edu/");
-		String url = "https://www.usf.edu/" ;
+		String url = "https://www.usf.edu/";
 		System.out.println(driver.getTitle());
 		//assertTrue(driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee, FL"));
 		System.out.println("flag 1");
@@ -49,7 +49,7 @@ class calculatorTest {
 		WebElement d=driver.findElement(By.xpath("/html/body/header/div[3]/div/nav/ul/li[1]/div[1]/a"));  
 		System.out.println(d);
 		//d.click();
-		  action.moveToElement(d).moveToElement(driver.findElement(By.xpath("//a[@href='/work-at-usf/']"))).click();
+		  action.moveToElement(d).moveToElement(driver.findElement(By.xpath("/html/body/header/div[3]/div/nav/ul/li[1]/div[2]/div/div[3]/ul/li[4]/a"))).click();
 		  //action.moveToElement(button).moveToElement(webdriver.findElement(By.linkText("Registry Settings")).click().build().perform();
 		  //WebElement x = driver.findElement(By.xpath("//a[@href='/work-at-usf/']"));
 		  //x.click();
