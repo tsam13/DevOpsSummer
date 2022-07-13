@@ -47,7 +47,7 @@ class calculatorTest {
 		WebElement d=driver.findElement(By.className("collapsible-heading-toggle"));
 		  System.out.println(d);
 		  d.click();
-		  WebElement x = driver.findElement(By.xpath("//a[@href='/#']"));
+		  WebElement x = driver.findElement(By.xpath("//a[@href='#']"));
 		  x.click();
 		WebElement items = driver.findElement(By.tagName("li"));
 		  System.out.println(items);
