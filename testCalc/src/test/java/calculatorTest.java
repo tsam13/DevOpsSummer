@@ -1,5 +1,9 @@
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -37,35 +41,63 @@ class calculatorTest {
 	void OpenBrowser() {
 		WebDriver driver;
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\trist\\OneDrive\\Desktop\\DEVOPS Proj SU22\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("headless");
 		driver = new ChromeDriver(options);
+		driver = new ChromeDriver();
 		driver.get("https://www.usf.edu/");
-		//String url = "https://www.usf.edu/";
+		String originalWindow = driver.getWindowHandle();
 		System.out.println(driver.getTitle());
-		//assertTrue(driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee, FL"));
+		assertTrue(driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee, FL"));
+		
 		System.out.println("flag 1");
+		
 		Actions action = new Actions(driver);
-		WebElement d=driver.findElement(By.xpath("//a[@href='/work-at-usf/']"));  
+		WebElement d=driver.findElement(By.xpath("/html/body/header/div[3]/div/nav/ul/li[1]/div[1]/a"));  
 		System.out.println(d);
 		String t = d.getText();
 		System.out.println(d);
 		d.click();
-		  //action.moveToElement(d).moveToElement(driver.findElement(By.xpath("//a[@href='/work-at-usf/']"))).click().build().perform();
-		  //action.moveToElement(button).moveToElement(webdriver.findElement(By.linkText("Registry Settings")).click().build().perform();
-		// WebElement x = driver.findElement(By.xpath("//a[@href='/work-at-usf/']"));
-		//  x.click();
-		//WebElement items = driver.findElement(By.tagName("li"));
-		//  System.out.println(items);
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+		
 		System.out.println("flag 2");
-		WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
-		webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/work-at-usf/']")));
-		WebElement p=driver.findElement(By.xpath("//a[@href='/work-at-usf/']"));
-	      p.click();
+		
+		WebElement x = driver.findElement(By.xpath("/html/body/header/div[3]/div/nav/ul/li[1]/div[2]/div/div[3]/ul/li[4]/a"));
+		x.click();
 	    System.out.println("flag 3");
 	    String title = driver.getTitle();
 	      System.out.println("Page title after link click : " + title);
-	      driver.close();
+	      driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+	     
+	    WebElement y = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/a[2]"));
+	    y.click();
+	    driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+	    System.out.println("flag 4");
+	  
+	    //Loop through until we find a new window handle
+	    for (String windowHandle : driver.getWindowHandles()) {
+	        if(!originalWindow.contentEquals(windowHandle)) {
+	            driver.switchTo().window(windowHandle);
+	            break;
+	        }
+	    }
+	    
+	 
+	    title = driver.getTitle();
+	    System.out.println("Page title after link click : " + title);
+	    
+	    
+	    driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);  
+	    WebElement z = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/p[5]/a"));
+	    z.click();
+	    driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+	    System.out.println("flag 5");
+	    
+	    title = driver.getTitle();
+	    System.out.println("Page title after link click : " + title);
+	    driver.close();
+	    driver.quit();
 		
 	}
 	
