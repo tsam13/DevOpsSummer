@@ -40,12 +40,12 @@ class calculatorTest {
 	@Test
 	void OpenBrowser() {
 		WebDriver driver;
-		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\trist\\OneDrive\\Desktop\\DEVOPS Proj SU22\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\trist\\OneDrive\\Desktop\\DEVOPS Proj SU22\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("headless");
-		driver = new ChromeDriver(options);
-		//driver = new ChromeDriver();
+		//options.addArguments("headless");
+		//driver = new ChromeDriver(options);
+		driver = new ChromeDriver();
 		driver.get("https://www.usf.edu/");
 		String originalWindow = driver.getWindowHandle();
 		System.out.println(driver.getTitle());
