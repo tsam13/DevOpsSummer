@@ -46,8 +46,9 @@ class calculatorTest {
 		//assertTrue(driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee, FL"));
 		System.out.println("flag 1");
 		Actions action = new Actions(driver);
-		WebElement d=driver.findElement(By.className("subNav_heading"));
-		  System.out.println(d);
+		WebElement d=driver.findElement(By.xpath("/html/body/header/div[3]/div/nav/ul/li[1]/div[1]/a"));  
+		System.out.println(d);
+		//d.click();
 		  action.moveToElement(d).moveToElement(driver.findElement(By.xpath("//a[@href='/work-at-usf/']"))).click();
 		  //action.moveToElement(button).moveToElement(webdriver.findElement(By.linkText("Registry Settings")).click().build().perform();
 		  //WebElement x = driver.findElement(By.xpath("//a[@href='/work-at-usf/']"));
