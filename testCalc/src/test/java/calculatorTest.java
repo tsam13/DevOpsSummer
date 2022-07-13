@@ -45,7 +45,7 @@ class calculatorTest {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("headless");
 		driver = new ChromeDriver(options);
-		driver = new ChromeDriver();
+		//driver = new ChromeDriver();
 		driver.get("https://www.usf.edu/");
 		String originalWindow = driver.getWindowHandle();
 		System.out.println(driver.getTitle());
