@@ -48,7 +48,7 @@ class calculatorTest {
 		Actions action = new Actions(driver);
 		WebElement d=driver.findElement(By.xpath("//a[@href='#']"));  
 		System.out.println(d);
-		//d.click();
+		d.click();
 		  action.moveToElement(d).moveToElement(driver.findElement(By.xpath("//a[@href='/work-at-usf/']"))).click().build().perform();
 		  //action.moveToElement(button).moveToElement(webdriver.findElement(By.linkText("Registry Settings")).click().build().perform();
 		 //WebElement x = driver.findElement(By.xpath("//a[@href='/work-at-usf/']"));
