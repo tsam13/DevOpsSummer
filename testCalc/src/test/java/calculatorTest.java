@@ -46,7 +46,7 @@ class calculatorTest {
 		//assertTrue(driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee, FL"));
 		System.out.println("flag 1");
 		Actions action = new Actions(driver);
-		WebElement d=driver.findElement(By.className("collapsible-heading-toggle"));
+		WebElement d=driver.findElement(By.className("subNav_heading"));
 		  System.out.println(d);
 		  action.moveToElement(d).moveToElement(driver.findElement(By.linkText("Work at USF"))).click();
 		  //action.moveToElement(button).moveToElement(webdriver.findElement(By.linkText("Registry Settings")).click().build().perform();
