@@ -61,7 +61,8 @@ class calculatorTest {
 		WebElement p=driver.findElement(By.linkText("Work at USF"));
 	      p.click();
 	    System.out.println("flag 3");
-	      System.out.println("Page title after link click : " + driver.getTitle());
+	    String title = driver.getTitle();
+	      System.out.println("Page title after link click : " + title);
 	      driver.close();
 		
 	}
