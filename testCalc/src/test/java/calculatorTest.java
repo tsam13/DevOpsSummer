@@ -40,12 +40,15 @@ class calculatorTest {
 		options.addArguments("headless");
 		driver = new ChromeDriver(options);
 		driver.get("https://www.usf.edu/");
+		String url = "https://www.usf.edu/" ;
 		System.out.println(driver.getTitle());
 		//assertTrue(driver.getTitle().equals("Welcome to the University of South Florida | Tampa, St. Petersburg, Sarasota-Manatee, FL"));
 		System.out.println("flag 1");
 		WebElement d=driver.findElement(By.className("collapsible-heading-toggle"));
 		  System.out.println(d);
 		  d.click();
+		  WebElement x = driver.findElement(By.xpath("//a[@href='/#']"));
+		  x.click();
 		WebElement items = driver.findElement(By.tagName("li"));
 		  System.out.println(items);
 		System.out.println("flag 2");
