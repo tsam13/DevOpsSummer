@@ -58,7 +58,7 @@ class calculatorTest {
 		WebElement d=driver.findElement(By.xpath("/html/body/header/div[3]/div/nav/ul/li[1]/div[1]/a"));  
 		System.out.println(d);
 		String t = d.getText();
-		System.out.println(d);
+		System.out.println(t);
 		d.click();
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 		
