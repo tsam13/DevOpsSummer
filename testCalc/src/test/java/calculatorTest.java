@@ -45,9 +45,9 @@ class calculatorTest {
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\trist\\OneDrive\\Desktop\\DEVOPS Proj SU22\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("headless");
-		//options.addArguments("window-size=800,600");
+		options.addArguments("window-size=1920,1080");
 		driver = new ChromeDriver(options);
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		//driver.manage().window().setSize(new Dimension(1920, 1080));
 		//driver = new ChromeDriver();
 		driver.get("https://www.usf.edu/");
